@@ -1,0 +1,16 @@
+{
+	"name": "udpserver",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "node --loader ts-node/esm index.ts",
+		"build": "tsc index.ts --outDir dist --module esnext --target esnext --moduleResolution node --esModuleInterop true --skipLibCheck true",
+		"start": "node dist/index.js"
+	},
+	"devDependencies": {
+		"@types/node": "latest",
+		"ts-node": "10.9.2",
+		"typescript": "^5.8.3"
+	}
+}
